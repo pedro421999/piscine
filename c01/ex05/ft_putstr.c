@@ -1,40 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psottoma <psottoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 12:51:13 by psottoma          #+#    #+#             */
-/*   Updated: 2022/09/14 10:19:51 by psottoma         ###   ########.fr       */
+/*   Created: 2022/09/13 12:51:29 by psottoma          #+#    #+#             */
+/*   Updated: 2022/09/14 10:22:31 by psottoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-void	ft_swap(int *a, int *b);
-
-void	ft_swap(int *a, int *b)
+void	ft_putchar(char c)
 {
-	int	x;
+	write(1, &c, 1);
+}
 
-	x = *a;
-	*a = *b;
-	*b = x;
+void	ft_putstr(char *str)
+{
+	while (*str != '\0')
+	{
+		ft_putchar(*str);
+		str ++;
+	}
 }
 
 /*int main()
 {
-	int *y;
-	int *z;
-	int d;
-	int c;
-	d = 42;
-	c = 24;
-
-	y = &d;
-	z = &c;
-	ft_swap(y, z);
-	printf("%d%d\n", *y, *z);
+	char *str;
+	str = "Hello";
+	ft_putstr(str);
 }
 */

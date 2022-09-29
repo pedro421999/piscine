@@ -1,40 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psottoma <psottoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 12:51:13 by psottoma          #+#    #+#             */
-/*   Updated: 2022/09/14 10:19:51 by psottoma         ###   ########.fr       */
+/*   Created: 2022/09/13 12:51:31 by psottoma          #+#    #+#             */
+/*   Updated: 2022/09/14 10:23:14 by psottoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	ft_swap(int *a, int *b);
-
-void	ft_swap(int *a, int *b)
+int	ft_strlen(char *str)
 {
 	int	x;
 
-	x = *a;
-	*a = *b;
-	*b = x;
+	x = 0;
+	while (str[x] != '\0')
+	{
+		x++;
+	}
+	return (x);
 }
 
 /*int main()
-{
-	int *y;
-	int *z;
-	int d;
-	int c;
-	d = 42;
-	c = 24;
-
-	y = &d;
-	z = &c;
-	ft_swap(y, z);
-	printf("%d%d\n", *y, *z);
+{	
+	char str[] = "Hello";
+	int x;
+	x = ft_strlen(str);
+	printf("%d\n", x);
 }
 */

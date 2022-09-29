@@ -1,2 +1,2 @@
-find . -type f -iname "*.sh" | cut -d '.' -f 2 | cut -d '/' -f2
+find . -type f -name '*.sh' -execdir basename {} .sh ';'
 

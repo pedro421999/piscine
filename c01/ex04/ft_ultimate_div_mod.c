@@ -1,40 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psottoma <psottoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 12:51:13 by psottoma          #+#    #+#             */
-/*   Updated: 2022/09/14 10:19:51 by psottoma         ###   ########.fr       */
+/*   Created: 2022/09/13 12:51:23 by psottoma          #+#    #+#             */
+/*   Updated: 2022/09/14 10:27:16 by psottoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	ft_swap(int *a, int *b);
+void	ft_ultimate_div_mod(int *a, int *b);
 
-void	ft_swap(int *a, int *b)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	int	x;
+	int	div;
+	int	mod;
 
-	x = *a;
-	*a = *b;
-	*b = x;
+	div = *a / *b;
+	mod = *a % *b;
+	*a = div;
+	*b = mod;
 }
 
 /*int main()
 {
-	int *y;
-	int *z;
-	int d;
-	int c;
-	d = 42;
-	c = 24;
-
-	y = &d;
-	z = &c;
-	ft_swap(y, z);
-	printf("%d%d\n", *y, *z);
+	int x = 10;
+	int y = 2;
+	int *a = &x;
+	int *b = &y;
+	ft_ultimate_div_mod(a, b);
+	printf("%d%d\n", *a, *b);
 }
 */
